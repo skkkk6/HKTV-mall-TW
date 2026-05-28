@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>台灣穿搭 水水召集令！｜HKTVmall 新品穿搭分享官</title>
+  
+  <!-- 引入 Google 時尚字體與 FontAwesome 潮流圖示 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    /* 全域重設與 Y2K 韓系甜美配色 */
+    :root {
+      --primary-pink: #FF2D95;
+      --light-pink: #FFF0F5;
+      --baby-pink: #FF8EC8;
+      --accent-yellow: #FFF200;
+      --mint-teal: #11caa0;
+      --soft-dark: #2A2A2A;
+      --bg-cream: #FCF9F2;
+      --chic-apricot: #FFEDE0;
+    }
+
+    * { 
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box; 
+    }
+
+    body { 
+      font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif; 
+      line-height: 1.6; 
+      background: #F3F4F6; 
+      color: var(--soft-dark); 
+      overflow-x: hidden;
+    }
+
+    /* 容器限制：完美適配 TikTok 移動端，並在桌機居中呈現高級感 */
+    .page-wrapper {
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+      background: var(--bg-cream);
+      box-shadow: 0 0 40px rgba(0,0,0,0.1);
+      position: relative;
+      min-height: 100vh;
+      padding-bottom: 30px;
+    }
+
+    /* ======= 1. 首屏高級漸層背景板 ======= */
+    .hero {
+      background: linear-gradient(135deg, #FFB7D5 0%, #FF2D95 100%);
+      color: white;
+      text-align: center;
+      padding: 40px 20px 35px;
+      position: relative;
+      border-bottom-left-radius: 35px;
+      border-bottom-right-radius: 35px;
+      box-shadow: 0 10px 30px rgba(255, 45, 149, 0.2);
+    }
+
+    /* 香港最大跨境電商 迷你黑標 */
+    .brand-badge {
+      background: rgba(0, 0, 0, 0.75);
+      color: var(--accent-yellow);
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      font-weight: 900;
+      line-height: 1.2;
+      text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+    }
+
+    .hero .subtitle {
+      font-size: 42px;
+      font-weight: 900;
+      color: var(--accent-yellow);
+      display: block;
+      margin-top: 5px;
+      text-shadow: 2px 2px 0px rgba(255, 45, 149, 0.6);
+      animation: titleBounce 2s infinite ease-in-out;
+    }
+
+    @keyframes titleBounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+
+    /* 宣傳文案毛玻璃卡片 */
+    .slogan-card {
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 20px;
+      padding: 15px;
+      margin: 20px auto 25px;
+      max-width: 92%;
+    }
+
+    .slogan-card p {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .slogan-card .highlight-tag {
+      background: #FFF;
+      color: var(--primary-pink);
+      padding: 4px 14px;
+      border-radius: 8px;
+      font-weight: 900;
+      font-size: 22px;
+      display: inline-block;
+      margin-top: 6px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    /* ======= 2. 替代死圖的「純 CSS 時尚相框背景板」 ======= */
+    .illustration-board {
+      background: #FFF;
+      border-radius: 24px;
+      padding: 30px 20px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+      max-width: 92%;
+      margin: 0 auto 10px;
+      position: relative;
+      border: 1px solid rgba(0,0,0,0.03);
+    }
+
+    /* 斜角時尚紙膠帶裝飾 */
+    .tape-deco {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%) rotate(-1deg);
+      background: var(--accent-yellow);
+      color: #000;
+      padding: 6px 25px;
+      font-size: 13px;
+      font-weight: 900;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      border-left: 4px dashed var(--primary-pink);
+      border-right: 4px dashed var(--primary-pink);
+      white-space: nowrap;
+    }
+
+    /* 穿搭博主幾何視覺插圖板（無死圖隱患） */
+    .style-showcase-box {
+      background: linear-gradient(135deg, #FFF6F9 0%, var(--chic-apricot) 100%);
+      border-radius: 16px;
+      padding: 25px 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      border: 1px dashed var(--baby-pink);
+    }
+
+    .hanger-icon-box {
+      width: 70px;
+      height: 70px;
+      background: #FFF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      color: var(--primary-pink);
+      box-shadow: 0 8px 20px rgba(255, 45, 149, 0.12);
+    }
+
+    .style-tags-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+    }
+
+    .style-pill {
+      background: #FFF;
+      color: #444;
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 700;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+      border: 1px solid #F0F0F0;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .style-pill i { color: var(--mint-teal); }
+
+    /* ======= 3. 行動按鈕（CTA Button） ======= */
+    .cta-container {
+      padding: 20px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 16px 20px;
+      background: var(--accent-yellow);
+      color: #000;
+      font-size: 22px;
+      font-weight: 900;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 8px 25px rgba(255, 242, 0, 0.4), inset 0 -4px 0 rgba(0,0,0,0.15);
+      border: 2px solid #FFF;
+      transition: transform 0.2s;
+      animation: buttonPulse 1.8s infinite ease-in-out;
+    }
+
+    .cta:active {
+      transform: scale(0.96);
+    }
+
+    @keyframes buttonPulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.04); }
+    }
+
+    /* ======= 4. 福利卡片背景板 ======= */
+    .benefits {
+      padding: 35px 20px;
+      background: var(--light-pink);
+      background-image: radial-gradient(#FFD2E8 1.5px, transparent 1.5px);
+      background-size: 24px 24px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 24px;
+      font-weight: 900;
+      margin-bottom: 25px;
+      color: var(--primary-pink);
+    }
+
+    .section-title span {
+      background: #FFF;
+      padding: 6px 22px;
+      border-radius: 50px;
+      border: 2px solid var(--primary-pink);
+      display: inline-block;
+      box-shadow: 4px 4px 0px var(--baby-pink);
+    }
+
+    .benefit-item {
+      background: white;
+      border-radius: 20px;
+      padding: 20px;
+      margin-bottom: 16px;
+      box-shadow: 0 8px 20px rgba(255, 45, 149, 0.04);
+      border: 1px solid #FFE4EE;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .benefit-icon {
+      font-size: 28px;
+      background: linear-gradient(135deg, #FFF0F5 0%, #FFE4EE 100%);
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-pink);
+      flex-shrink: 0;
+    }
+
+    .benefit-text h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--soft-dark);
+      margin-bottom: 2px;
+    }
+
+    .benefit-text p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* ======= 5. 報名流程板（Register Section） ======= */
+    .register {
+      background: linear-gradient(180deg, var(--primary-pink) 0%, var(--baby-pink) 100%);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .register-board {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 24px;
+      padding: 25px 15px;
+      margin-bottom: 25px;
+    }
+
+    .register h2 {
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--accent-yellow);
+      margin-bottom: 15px;
+    }
+
+    /* 手機端操作模擬看板 */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      text-align: left;
+    }
+
+    .step-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(4px);
+      padding: 14px 16px;
+      border-radius: 14px;
+      font-size: 15px;
+      font-weight: 700;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .step-num {
+      background: var(--accent-yellow);
+      color: #000;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 13px;
+      flex-shrink: 0;
+    }
+
+    .register-limit {
+      margin-top: 20px;
+      font-size: 14px;
+      opacity: 0.9;
+      font-weight: 500;
+    }
+
+    /* ======= 6. 底部保障欄 ======= */
+    .trust-footer {
+      padding: 30px 20px;
+      text-align: center;
+      background: var(--bg-cream);
+      border-top: 1px solid #EAE1D2;
+    }
+
+    .trust-logo {
+      font-family: 'Comfortaa', sans-serif;
+      font-size: 22px;
+      font-weight: 900;
+      color: #444;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .trust-logo span {
+      color: var(--primary-pink);
+    }
+
+    .trust-desc {
+      font-size: 13px;
+      color: #888;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-wrapper">
+    
+    <!-- 頂部首屏背景板 -->
+    <section class="hero">
+      <div class="brand-badge">
+        <i class="fa-solid fa-bolt"></i> HKTVmall 香港最大跨境電商
+      </div>
+      <h1>台灣穿搭<br><span class="subtitle">水水召集令！</span></h1>
+      
+      <div class="slogan-card">
+        <p>熱烈尋找在地官方專屬</p>
+        <span class="highlight-tag">「新品穿搭分享官」</span>
+      </div>
+    </section>
+
+    <!-- 純CSS繪製的時尚插畫相框，徹底解決裂圖問題 -->
+    <div style="padding: 0 20px; margin-top: -15px;">
+      <div class="illustration-board">
+        <div class="tape-deco"><i class="fa-solid fa-sparkles"></i> 台灣水水專屬限定 🇹🇼</div>
+        
+        <div class="style-showcase-box">
+          <div class="hanger-icon-box">
+            <i class="fa-solid fa-shirt"></i>
+          </div>
+          <p style="font-weight:900; font-size:18px; color:var(--primary-pink); text-align:center;">
+            免費開箱 • 潮流前瞻
+          </p>
+          
+          <!-- 時尚穿搭標籤底板 -->
+          <div class="style-tags-container">
+            <div class="style-pill"><i class="fa-solid fa-heart"></i> 韓系溫柔風</div>
+            <div class="style-pill"><i class="fa-solid fa-star"></i> 日系多層次</div>
+            <div class="style-pill"><i class="fa-solid fa-gem"></i> 當季流行款</div>
+            <div class="style-pill"><i class="fa-solid fa-camera"></i> 不限身型</div>
+            <div class="style-pill"><i class="fa-solid fa-wand-magic-sparkles"></i> 可不露臉</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 第一主轉換按鈕 -->
+    <div class="cta-container">
+      <a href="#register" class="cta">
+        立即登記加入我們吧！ <i class="fa-solid fa-chevron-right"></i>
+      </a>
+    </div>
+
+    <!-- 招募獨家福利背景板 -->
+    <section class="benefits">
+      <div class="section-title">
+        <span>✨ 招募獨家福利 ✨</span>
+      </div>
+      
+      <!-- 福利 1 -->
+      <div class="benefit-item">
+        <div class="benefit-icon">
+          <i class="fa-solid fa-face-smile-wink"></i>
+        </div>
+        <div class="benefit-text">
+          <h3>不限身型 · 可不露臉</h3>
+          <p>不必有容貌焦慮！只要你熱愛分享穿搭，人人都能做博主。</p>
+        </div>
+      </div>
+
+      <!-- 福利 2 -->
+      <div class="benefit-item">
+        <div class="benefit-icon">
+          <i class="fa-solid fa-wand-magic"></i>
+        </div>
+        <div class="benefit-text">
+          <h3>免費體驗當季服飾</h3>
+          <p>零門檻搶先寄送最新最熱門的日韓服飾到你家。</p>
+        </div>
+      </div>
+
+      <!-- 福利 3 -->
+      <div class="benefit-item">
+        <div class="benefit-icon">
+          <i class="fa-solid fa-bullhorn"></i>
+        </div>
+        <div class="benefit-text">
+          <h3>官方百萬流量扶持</h3>
+          <p>優質開箱視頻將獲得官方 TikTok 流量加推與長久合作。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 報名引導看板 -->
+    <section id="register" class="register">
+      <div class="register-board">
+        <h2>報名管道已開啟！👇</h2>
+        <p style="font-size:14px; opacity:0.9; margin-bottom:20px;">請按照以下 TikTok 操作步驟快速加入：</p>
+        
+        <div class="steps">
+          <div class="step-item">
+            <div class="step-num">1</div>
+            <div>點擊頭像進入本活動 TikTok 主頁</div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">2</div>
+            <div>查看主頁「置頂影片」或下方網頁連結</div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">3</div>
+            <div>點擊連結填寫報名表，即刻卡位成功！</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 底部按鈕 -->
+      <div class="cta-container" style="padding:0;">
+        <a href="https://lihi2.me/Omzjs" class="cta" style="background:#FFF; color:var(--primary-pink); box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+          立即前往主頁登記！ <i class="fa-solid fa-arrow-pointer"></i>
+        </a>
+      </div>
+      
+      <p class="register-limit"><i class="fa-solid fa-fire"></i> 本期名額有限，招滿即關閉，水水們抓緊機會！</p>
+    </section>
+
+    <!-- 品牌信任欄 -->
+    <footer class="trust-footer">
+      <div class="trust-logo">
+        <i class="fa-solid fa-bag-shopping" style="color:var(--primary-pink)"></i> HKTV<span>mall</span>
+      </div>
+      <p class="trust-desc">香港上市公司跨境電商平台 ｜ 100% 正品穿搭體驗</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
